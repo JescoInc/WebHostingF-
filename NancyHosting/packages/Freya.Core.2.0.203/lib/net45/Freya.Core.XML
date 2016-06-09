@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+<assembly><name>Freya.Core</name></assembly>
+<members>
+<member name="T:Freya.Core.Builder.FreyaBuilder">
+<summary>
+ Defines a computation expression builder for constructing &lt;see cref=&quot;Freya{T}&quot; /&gt; computations.
+</summary>
+</member>
+<member name="P:Freya.Core.Builder.freya">
+<summary>
+ The instance of &lt;see cref=&quot;FreyaBuilder&quot; /&gt; used for constructing
+ &lt;see cref=&quot;Freya{T}&quot; /&gt; computations.
+</summary>
+</member>
+<member name="M:Freya.Core.FreyaModule.map2``3(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``1,``2}},Microsoft.FSharp.Core.FSharpFunc{Freya.Core.Types.FreyaState,Microsoft.FSharp.Control.FSharpAsync{System.Tuple{``0,Freya.Core.Types.FreyaState}}},Microsoft.FSharp.Core.FSharpFunc{Freya.Core.Types.FreyaState,Microsoft.FSharp.Control.FSharpAsync{System.Tuple{``1,Freya.Core.Types.FreyaState}}})">
+<summary>
+ Applies a function taking two arguments to two &lt;see cref=&quot;Freya{T}&quot; /&gt; computations.
+</summary>
+</member>
+<member name="M:Freya.Core.FreyaModule.map``2(Microsoft.FSharp.Core.FSharpFunc{``0,``1},Microsoft.FSharp.Core.FSharpFunc{Freya.Core.Types.FreyaState,Microsoft.FSharp.Control.FSharpAsync{System.Tuple{``0,Freya.Core.Types.FreyaState}}})">
+<summary>
+ Applies a function taking one arguments to one &lt;see cref=&quot;Freya{T}&quot; /&gt; computations.
+</summary>
+</member>
+<member name="M:Freya.Core.FreyaModule.apply``2(Microsoft.FSharp.Core.FSharpFunc{Freya.Core.Types.FreyaState,Microsoft.FSharp.Control.FSharpAsync{System.Tuple{Microsoft.FSharp.Core.FSharpFunc{``0,``1},Freya.Core.Types.FreyaState}}},Microsoft.FSharp.Core.FSharpFunc{Freya.Core.Types.FreyaState,Microsoft.FSharp.Control.FSharpAsync{System.Tuple{``0,Freya.Core.Types.FreyaState}}})">
+<summary>
+ Applies a function wrapped in a &lt;see cref=&quot;Freya{T}&quot; /&gt; computation
+ onto a &lt;see cref=&quot;Freya{T}&quot; /&gt; computation value.
+</summary>
+</member>
+<member name="M:Freya.Core.FreyaModule.bind``2(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{Freya.Core.Types.FreyaState,Microsoft.FSharp.Control.FSharpAsync{System.Tuple{``1,Freya.Core.Types.FreyaState}}}},Microsoft.FSharp.Core.FSharpFunc{Freya.Core.Types.FreyaState,Microsoft.FSharp.Control.FSharpAsync{System.Tuple{``0,Freya.Core.Types.FreyaState}}},Freya.Core.Types.FreyaState)">
+<summary>
+ Binds a &lt;see cref=&quot;Freya{T}&quot; /&gt; computation with a function that
+ takes the value from the &lt;see cref=&quot;Freya{T}&quot; /&gt; computation and
+ computes a new &lt;see cref=&quot;Freya{T}&quot; /&gt; computation of a possibly
+ different type.
+</summary>
+</member>
+<member name="M:Freya.Core.FreyaModule.fromAsync``3(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Control.FSharpAsync{``1}})">
+<summary>
+ Applies a function of a value to an &lt;see cref=&quot;Async{T}&quot; /&gt; result
+ into a &lt;see cref=&quot;Freya{T}&quot; /&gt; computation.
+</summary>
+</member>
+<member name="M:Freya.Core.FreyaModule.init``1(``0,Freya.Core.Types.FreyaState)">
+<summary>
+ Wraps a value x in a &lt;see cref=&quot;Freya{T}&quot; /&gt; computation.
+</summary>
+</member>
+<member name="M:Freya.Core.FreyaModule.Lens.mapPartial``2(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpOption{``1}},Microsoft.FSharp.Core.FSharpFunc{``1,Microsoft.FSharp.Core.FSharpFunc{``0,``0}},Microsoft.FSharp.Core.FSharpFunc{``1,``1})">
+<summary>
+ Modifies part of the Core State within a Core monad using a partial Aether lens
+</summary>
+</member>
+<member name="M:Freya.Core.FreyaModule.Lens.map``2(Microsoft.FSharp.Core.FSharpFunc{``0,``1},Microsoft.FSharp.Core.FSharpFunc{``1,Microsoft.FSharp.Core.FSharpFunc{``0,``0}},Microsoft.FSharp.Core.FSharpFunc{``1,``1})">
+<summary>
+ Modifies part of the Core State within a Core monad using an Aether lens
+</summary>
+</member>
+<member name="M:Freya.Core.FreyaModule.Lens.setPartial``2(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpOption{``1}},Microsoft.FSharp.Core.FSharpFunc{``1,Microsoft.FSharp.Core.FSharpFunc{``0,``0}},``1)">
+<summary>
+ Sets part of the Core State within a Core monad using a partial Aether lens
+</summary>
+</member>
+<member name="M:Freya.Core.FreyaModule.Lens.set``2(Microsoft.FSharp.Core.FSharpFunc{``0,``1},Microsoft.FSharp.Core.FSharpFunc{``1,Microsoft.FSharp.Core.FSharpFunc{``0,``0}},``1)">
+<summary>
+ Sets part of the Core State within a Core monad using an Aether lens
+</summary>
+</member>
+<member name="M:Freya.Core.FreyaModule.Lens.getPartial``1(Microsoft.FSharp.Core.FSharpFunc{Freya.Core.Types.FreyaState,Microsoft.FSharp.Core.FSharpOption{``0}},Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{Freya.Core.Types.FreyaState,Freya.Core.Types.FreyaState}})">
+<summary>
+ Gets part of the Core State within a Core monad using a partial Aether lens
+</summary>
+</member>
+<member name="M:Freya.Core.FreyaModule.Lens.get``1(Microsoft.FSharp.Core.FSharpFunc{Freya.Core.Types.FreyaState,``0},Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{Freya.Core.Types.FreyaState,Freya.Core.Types.FreyaState}})">
+<summary>
+ Gets part of the Core State within a Core monad using an Aether lens
+</summary>
+</member>
+<member name="M:Freya.Core.FreyaModule.State.map``2(Microsoft.FSharp.Core.FSharpFunc{``0,``1},``0)">
+<summary>
+ Modifies the Freya State within a Freya monad
+</summary>
+</member>
+<member name="M:Freya.Core.FreyaModule.State.set``2(``0,``1)">
+<summary>
+ Sets the Freya State within a Freya monad
+</summary>
+</member>
+<member name="M:Freya.Core.FreyaModule.State.get``1(``0)">
+<summary>
+ Gets the Freya State within a Freya monad
+</summary>
+</member>
+<member name="T:Freya.Core.FreyaModule">
+<summary>
+ Core combinator definitions for &lt;see cref=&quot;Freya{T}&quot; /&gt; computations.
+</summary>
+</member>
+<member name="T:Freya.Core.Integration.OwinMidFunc">
+<summary>
+ Type alias for the OWIN MidFunc signature.
+</summary>
+</member>
+<member name="T:Freya.Core.Integration.OwinAppFunc">
+<summary>
+ Type alias for the OWIN AppFunc signature.
+</summary>
+</member>
+<member name="T:Freya.Core.Integration.OwinEnvironment">
+<summary>
+ Type alias of &lt;see cref=&quot;FreyaEnvironment&quot; /&gt; in terms of OWIN.
+</summary>
+</member>
+<member name="M:Freya.Core.Integration.OwinMidFuncModule.SplitIntoFreya(System.Func{System.Func{System.Collections.Generic.IDictionary{System.String,System.Object},System.Threading.Tasks.Task},System.Func{System.Collections.Generic.IDictionary{System.String,System.Object},System.Threading.Tasks.Task}})">
+<summary>
+ Splits a MidFunc into a before and after Freya.Pipeline.
+</summary>
+</member>
+<member name="M:Freya.Core.Integration.OwinMidFuncModule.FromFreyaWrapped(Microsoft.FSharp.Core.FSharpFunc{Freya.Core.Types.FreyaState,Microsoft.FSharp.Control.FSharpAsync{System.Tuple{Freya.Core.Types.FreyaPipelineChoice,Freya.Core.Types.FreyaState}}},Microsoft.FSharp.Core.FSharpFunc{Freya.Core.Types.FreyaState,Microsoft.FSharp.Control.FSharpAsync{System.Tuple{Freya.Core.Types.FreyaPipelineChoice,Freya.Core.Types.FreyaState}}})">
+<summary>
+ Converts a Freya.Pipeline to an OWIN MidFunc.
+</summary>
+</member>
+<member name="M:Freya.Core.Integration.OwinMidFuncModule.FromFreyaAfter(Microsoft.FSharp.Core.FSharpFunc{Freya.Core.Types.FreyaState,Microsoft.FSharp.Control.FSharpAsync{System.Tuple{Freya.Core.Types.FreyaPipelineChoice,Freya.Core.Types.FreyaState}}})">
+<summary>
+ Converts a Freya.Pipeline to an OWIN MidFunc run after executing the next OwinAppFunc.
+</summary>
+</member>
+<member name="M:Freya.Core.Integration.OwinMidFuncModule.FromFreya(Microsoft.FSharp.Core.FSharpFunc{Freya.Core.Types.FreyaState,Microsoft.FSharp.Control.FSharpAsync{System.Tuple{Freya.Core.Types.FreyaPipelineChoice,Freya.Core.Types.FreyaState}}})">
+<summary>
+ Converts a Freya.Pipeline to an OWIN MidFunc run before executing the next OwinAppFunc.
+</summary>
+</member>
+<member name="T:Freya.Core.Integration.OwinMidFuncModule">
+<summary>
+ Provides transformation functions for converting to/from OWIN middlewares from/to Freya Pipelines.
+</summary>
+</member>
+<member name="M:Freya.Core.Integration.OwinAppFuncModule.ToFreya(System.Func{System.Collections.Generic.IDictionary{System.String,System.Object},System.Threading.Tasks.Task},Freya.Core.Types.FreyaState)">
+<summary>
+ Converts an &lt;see cref=&quot;OwinAppFunc&quot; /&gt; to a &lt;see cref=&quot;Freya{T}&quot; /&gt; computation
+ to allow use of standard OWIN components within Freya.
+ NOTE: EXPERIMENTAL
+</summary>
+</member>
+<member name="M:Freya.Core.Integration.OwinAppFuncModule.FromFreya``1(Microsoft.FSharp.Core.FSharpFunc{Freya.Core.Types.FreyaState,Microsoft.FSharp.Control.FSharpAsync{System.Tuple{``0,Freya.Core.Types.FreyaState}}})">
+<summary>
+ Converts a &lt;see cref=&quot;Freya{T}&quot; /&gt; computation to an &lt;see cref=&quot;OwinAppFunc&quot; /&gt;.
+</summary>
+</member>
+<member name="T:Freya.Core.Integration.OwinAppFuncModule">
+<summary>
+ Provides transformation functions for converting to/from OWIN from/to Freya.
+</summary>
+</member>
+<member name="T:Freya.Core.Operators">
+<summary>
+ Custom operators for composing &lt;see cref=&quot;Freya{T}&quot; /&gt; computations.
+</summary>
+</member>
+<member name="M:Freya.Core.Prelude.box_``1">
+<summary>
+ Provides isomorphisms for boxing and unboxing.
+</summary>
+</member>
+<member name="M:Freya.Core.Prelude.mutKeyP_``2(``0)">
+ <summary>
+ Defines get and set functions for a partial lens, <see cref="PLens{T1, T2}" />, over an <see cref="IDictionary{T1, T2}" />.
+ </summary>
+ <remarks>
+ The partial lens uses TryGetValue to retrieve the requested key's value and returns an <see cref="Option{T}" />.
+ The set function will always add or overwrite the value for key k.
+ </remarks>
+</member>
+<member name="M:Freya.Core.Prelude.mutKey_``2(``0)">
+<summary>
+ Defines get and set functions for a &lt;see cref=&quot;Lens{T1, T2}&quot; /&gt; over an &lt;see cref=&quot;IDictionary{T1, T2}&quot; /&gt;.
+</summary>
+</member>
+<member name="T:Freya.Core.Types.Freya`1">
+ <summary>
+ An <see cref="Async{T}" /> state computation type using <see cref="CoreState" />
+ as the state value and a generic type for the computed result.
+ </summary>
+ <remarks>
+ <see cref="Core{T}" /> represents an asynchronous state monad and forms the core all composition within Freya.
+ Note that the definition does not use a generic value for state but specifies <see cref="CoreState" />
+ explicitly as the state value. Further, this definition does not make use of a wrapped value but simply
+ provides an alias for the function definition. Both offer slight performance optimizations and allow Freya
+ to require additional dependencies.
+ </remarks>
+</member>
+<member name="T:Freya.Core.Types.FreyaMetaState">
+ <summary>
+ A state value representing Core computations' memoized values.
+ </summary>
+ <remarks>
+ This state value allows Freya to avoid polluting the <see cref="CoreEnvironment" />
+ with Freya-specific concerns.
+ </remarks>
+</member>
+<member name="T:Freya.Core.Types.FreyaState">
+<summary>
+ A state value to be threaded through Freya computations,
+ including the &lt;see cref=&quot;CoreEnvironment&quot; /&gt; and &lt;see cref=&quot;CoreMetaState&quot; /&gt;
+</summary>
+</member>
+<member name="T:Freya.Core.Types.FreyaEnvironment">
+<summary>
+ Type alias for &lt;see cref=&quot;IDictionary&lt;T1, T2&gt;&quot; /&gt; using &lt;see cref=&quot;String&quot; /&gt; for keys and containing boxed values.
+</summary>
+</member>
+</members>
+</doc>

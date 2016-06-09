@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "SelfHost", "SelfHost\SelfHost.fsproj", "{745A8BC0-0F89-47B3-BB4D-FCB47CACBADB}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "WCFHost", "WCFHost\WCFHost.fsproj", "{D1EFA5FB-5B37-4C86-BCBC-7A80EC3933DA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{745A8BC0-0F89-47B3-BB4D-FCB47CACBADB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{745A8BC0-0F89-47B3-BB4D-FCB47CACBADB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{745A8BC0-0F89-47B3-BB4D-FCB47CACBADB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{745A8BC0-0F89-47B3-BB4D-FCB47CACBADB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1EFA5FB-5B37-4C86-BCBC-7A80EC3933DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1EFA5FB-5B37-4C86-BCBC-7A80EC3933DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1EFA5FB-5B37-4C86-BCBC-7A80EC3933DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1EFA5FB-5B37-4C86-BCBC-7A80EC3933DA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
